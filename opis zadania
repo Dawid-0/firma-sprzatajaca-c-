@@ -1,0 +1,28 @@
+w WPF
+1. funkcjonowanie firmy usługowej która ma nastepujace skladniki działalności:
+-pracownicy
+-sprzet
+-klienci
+-terminy
+firma sprzatajaca
+ma uslugi wiec w zwiazku tym ma sprzety takie jak:
+-myjki cisnieniowe
+-kosiarki
+-kosy spalinowe, tarczowe i zylkowe
+czasami jedna kosa ma mozliwosc tarczy i zylki bo sa tez takie
+-pojazdy z przyczepa
+-pracownicy:	
+	-imie -nazwisko -wiek -i co tam sb wymyslimy, bo kazdy pracownik moze wykonywac kazda czynnosci czyli moze skorzystac z kazdego sprzetu (maja uprawnienia)
+Napisz programik, który będzie pozwalal zarzadzac osobami i sprzętem na poczet klientów i terminow, w których te czynności będą wykonywane.
+Można zdefiniować jakies usługi i kolejna tabela usługi, rodzaje usługi:
+	-czyszczenie kostki
+	-porządkowanie terenu
+	-wywoz nieczystości
+	-można cos zdefiniować jak cos do glowy przyjdzie
+Aplikacja za pomocą której adm może utworzyć terminarz, gdzie wie jacy sa klienci jaki sprzet wypożyczyli jacy pracownicy to robia, jak następny klient to zgłasza sw usuluge gdzies tam. taka baza danych, która pozwoli wpisac nowa usluge wywoz smieci terminarz, żeby nie było możliwości wyporu usługi pracowników o takim samym terminie etc.
+najpierw dwuwarstwowa a potem, trojwarstwowa
+
+binding - przypisanie właściwości kontrolki do pewnej właściwości zdefiniowanej w innej kontrolce
+
+
+Projektujemy baze danych i interfejs do bazy danych
