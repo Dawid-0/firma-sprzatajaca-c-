@@ -73,8 +73,8 @@
         </UniformGrid>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Anuluj" Width="100" Height="35" Margin="0,0,10,0" Background="#E0E0E0" BorderThickness="0" Click="Anuluj_Click"/>
-            <Button Content="Zapisz Zlecenie" Width="140" Height="35" Background="#007ACC" Foreground="White" Click="Zapisz_Click"/>
+            <Button Content="Anuluj" Width="100" Height="35" Margin="0,0,10,0" Background="#E0E0E0" BorderThickness="0" />
+            <Button Content="Zapisz Zlecenie" Width="140" Height="35" Background="#007ACC" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>
