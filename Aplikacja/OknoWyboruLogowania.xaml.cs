@@ -29,7 +29,10 @@ namespace Aplikacja
 
         private void Klient_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Wybrano panel Klienta!", "Logowanie", MessageBoxButton.OK, MessageBoxImage.Information);
+            OknoKlient oknoKlienta = new OknoKlient();
+            oknoKlienta.Show();
+
+            this.Hide();
 
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
