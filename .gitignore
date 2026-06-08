@@ -13,3 +13,7 @@
 /.vs/Aplikacja.slnx
 /.vs/firma-sprzatajaca-c-.slnx
 /.vs/ProjectEvaluation
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
