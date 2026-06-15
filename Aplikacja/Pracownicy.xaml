@@ -1,0 +1,79 @@
+﻿<Window x:Class="Aplikacja.Pracownicy"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aplikacja"
+        mc:Ignorable="d"
+        Title="Pracownicy" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="#F5F6F8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Content="Wróć" Width="120" Height="30" 
+                HorizontalAlignment="Left" Margin="15,15,0,0" 
+                Background="#E0E0E0" BorderBrush="#BDBDBD" 
+                Click="Wroc_Click" />
+
+        <Border Grid.Row="1" Background="#5448D6" CornerRadius="15" Margin="15,15,15,20" Height="100">
+            <TextBlock Text="Zarządzanie pracownikami" 
+                       Foreground="White" 
+                       FontSize="36" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <DataGrid Grid.Row="2" x:Name="PracownicyDataGrid" 
+                  AutoGenerateColumns="False" 
+                  Margin="15,0,15,15" 
+                  CanUserAddRows="False" 
+                  Background="White"
+                  BorderBrush="#D6D6D6"
+                  BorderThickness="1"
+                  RowHeight="30"
+                  HeadersVisibility="Column">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Imię" Binding="{Binding Imie}" Width="*"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding Nazwisko}" Width="*"/>
+                <DataGridTextColumn Header="Wiek" Binding="{Binding Wiek}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="3" Margin="15,10,15,20" Background="White" HorizontalAlignment="Stretch">
+
+            <Grid HorizontalAlignment="Center" Margin="0,15,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Column="0" Grid.Row="0" Text="Imię" Margin="0,0,0,5" Foreground="#333"/>
+                <TextBlock Grid.Column="2" Grid.Row="0" Text="Nazwisko" Margin="0,0,0,5" Foreground="#333"/>
+                <TextBlock Grid.Column="4" Grid.Row="0" Text="Wiek" Margin="0,0,0,5" Foreground="#333"/>
+
+                <TextBox Grid.Column="0" Grid.Row="1" x:Name="ImieTextBox" Height="30" Padding="5" BorderBrush="#CCC"/>
+                <TextBox Grid.Column="2" Grid.Row="1" x:Name="NazwiskoTextBox" Height="30" Padding="5" BorderBrush="#CCC"/>
+                <TextBox Grid.Column="4" Grid.Row="1" x:Name="WiekTextBox" Height="30" Padding="5" BorderBrush="#CCC"/>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <Button Content="Dodaj" Width="120" Height="30" Margin="0,0,15,0" Background="#E0E0E0" BorderBrush="#BDBDBD" Click="Dodaj_Click"/>
+                <Button Content="Usuń" Width="120" Height="30" Background="#E0E0E0" BorderBrush="#BDBDBD" Click="Usun_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>

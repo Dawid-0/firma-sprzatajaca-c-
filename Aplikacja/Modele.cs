@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Aplikacja
 {
@@ -27,8 +28,12 @@ namespace Aplikacja
         public string? Imie { get; set; }
         public string? Nazwisko { get; set; }
         public int Wiek { get; set; }
+
+        [NotMapped]
         public string PelneNazwisko => $"{Imie} {Nazwisko}";
-        //public bool CzyWybrany { get; set; }
+
+        [NotMapped]
+        public bool CzyWybrany { get; set; }
     }
 
     public class Sprzet
@@ -55,6 +60,7 @@ namespace Aplikacja
         public DateTime DataOd { get; set; }
         public DateTime DataDo { get; set; }
 
+        
         public int PracownikId { get; set; }
         public Pracownik Pracownik { get; set; }
 
