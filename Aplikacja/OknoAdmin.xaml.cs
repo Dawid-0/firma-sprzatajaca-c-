@@ -40,5 +40,13 @@ namespace Aplikacja
             oknosprzetu.Show();
             this.Hide();
         }
+
+        private void Pracownicy_Click(object sender, RoutedEventArgs e)
+        {
+            Pracownicy oknoPracownicy = new Pracownicy();
+            oknoPracownicy.Show();
+            this.Hide();
+
+        }
     }
 }

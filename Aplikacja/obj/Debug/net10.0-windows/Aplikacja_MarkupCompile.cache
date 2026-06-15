@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\gosc0\source\repos\Nowy folder (2)\Dawid-0\firma-sprzatajaca-c-\Aplikacja\App.xaml
-8205783215
+9-1503366182
 
-17-1672510869
+18-1557448323
 2242087302119
-DodajZlecenieWindow.xaml;MainWindow.xaml;OknoAdmin.xaml;OknoKlient.xaml;OknoListyUslug.xaml;OknoSprawdzZlecenia.xaml;OknoSprzet.xaml;OknoWyboruLogowania.xaml;
+DodajZlecenieWindow.xaml;MainWindow.xaml;OknoAdmin.xaml;OknoKlient.xaml;OknoListyUslug.xaml;OknoSprawdzZlecenia.xaml;OknoSprzet.xaml;OknoWyboruLogowania.xaml;Pracownicy.xaml;
 
 False
 

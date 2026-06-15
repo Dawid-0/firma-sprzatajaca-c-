@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Aplikacja
 {
@@ -33,7 +34,11 @@ namespace Aplikacja
         public string Imie { get; set; }
         public string Nazwisko { get; set; }
         public int Wiek { get; set; }
+
+        [NotMapped]
         public string PelneNazwisko => $"{Imie} {Nazwisko}";
+
+        [NotMapped]
         public bool CzyWybrany { get; set; }
     }
 
@@ -60,7 +65,15 @@ namespace Aplikacja
         public DateTime DataOd { get; set; }
         public DateTime DataDo { get; set; }
 
-        public List<Pracownik> Pracownicy { get; set; } = new();
-        public List<Sprzet> Sprzety { get; set; } = new();
+        // USUŃ LUB ZAKOMENTUJ TE LINIE:
+        // public List<Pracownik> Pracownicy { get; set; } = new();
+        // public List<Sprzet> Sprzety { get; set; } = new();
+
+        // DODAJ TO (zgodnie z kolumnami w Twojej bazie):
+        public int PracownikId { get; set; }
+        public Pracownik Pracownik { get; set; }
+
+        public int SprzetId { get; set; }
+        public Sprzet Sprzet { get; set; }
     }
 }
