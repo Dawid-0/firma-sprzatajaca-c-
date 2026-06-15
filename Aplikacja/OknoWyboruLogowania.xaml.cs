@@ -23,7 +23,10 @@ namespace Aplikacja
         }
         private void Admin_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Wybrano panel Administratora!", "Logowanie", MessageBoxButton.OK, MessageBoxImage.Information);
+            OknoAdmin oknoAdmina = new OknoAdmin();
+            oknoAdmina.Show();
+
+            this.Hide();
 
         }
 

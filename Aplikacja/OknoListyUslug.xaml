@@ -48,18 +48,6 @@
 
                 </StackPanel>
 
-                <Border Width="350"
-                        Height="200"
-                        Margin="250,0,0,0"
-                        BorderThickness="1.5"
-                        BorderBrush="#D1D5DB"
-                        CornerRadius="10">
-
-                    <Image x:Name="imgUsluga"
-                           Stretch="Uniform"/>
-
-                </Border>
-
             </WrapPanel>
 
             <TextBlock Text="Informacje o usłudze"
