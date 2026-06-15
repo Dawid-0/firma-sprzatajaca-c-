@@ -1,5 +1,21 @@
 ﻿################################################################################
-# Ten plik .gitignore został utworzony automatycznie przez Microsoft(R) Visual Studio.
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/Aplikacja/bin/Debug/net10.0-windows/BuildHost-net472/cs
+/Aplikacja/bin/Debug/net10.0-windows/BuildHost-net472
+/Aplikacja/bin/Debug/net10.0-windows/BuildHost-netcore
 /Aplikacja/bin/Debug/net10.0-windows/cs
+/Aplikacja/bin/Debug/net10.0-windows/de
+/Aplikacja/bin/Debug/net10.0-windows/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Aplikacja/bin/Debug/net10.0-windows/es
+/Aplikacja/bin/Debug/net10.0-windows
+/.vs/Aplikacja.slnx
+/.vs/firma-sprzatajaca-c-.slnx
+/.vs/ProjectEvaluation
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+/Aplikacja/obj/Debug/net10.0-windows/Aplikacja.AssemblyInfo.cs
+/Aplikacja/obj/Debug/net10.0-windows/Aplikacja.AssemblyInfoInputs.cache
