@@ -17,3 +17,5 @@
 [Oo]bj/
 .vs/
 *.user
+/Aplikacja/obj/Debug/net10.0-windows/Aplikacja.AssemblyInfo.cs
+/Aplikacja/obj/Debug/net10.0-windows/Aplikacja.AssemblyInfoInputs.cache
