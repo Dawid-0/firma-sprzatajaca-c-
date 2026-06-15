@@ -28,7 +28,7 @@ namespace Aplikacja
         public string? Nazwisko { get; set; }
         public int Wiek { get; set; }
         public string PelneNazwisko => $"{Imie} {Nazwisko}";
-        public bool CzyWybrany { get; set; }
+        //public bool CzyWybrany { get; set; }
     }
 
     public class Sprzet
@@ -55,7 +55,10 @@ namespace Aplikacja
         public DateTime DataOd { get; set; }
         public DateTime DataDo { get; set; }
 
-        public List<Pracownik> Pracownicy { get; set; } = new();
-        public List<Sprzet> Sprzety { get; set; } = new();
+        public int PracownikId { get; set; }
+        public Pracownik Pracownik { get; set; }
+
+        public int SprzetId { get; set; }
+        public Sprzet Sprzet { get; set; }
     }
 }

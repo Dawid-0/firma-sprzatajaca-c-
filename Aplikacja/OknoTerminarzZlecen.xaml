@@ -1,0 +1,92 @@
+﻿<Window x:Class="Aplikacja.OknoTerminarzZlecen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Terminarz zleceń"
+        Height="720"
+        Width="1100"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F7FA"
+        ResizeMode="NoResize">
+
+    <StackPanel Margin="20">
+
+
+        <Button Content="Wróć"
+                Width="120"
+                Height="35"
+                HorizontalAlignment="Left"
+                Margin="0,0,0,10"
+                Click="Powrot_Click"/>
+
+        <Border Background="#4F46E5"
+                CornerRadius="12"
+                Margin="0,0,0,20">
+
+            <TextBlock Text="TERMINARZ ZLECEŃ"
+                       FontSize="26"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       HorizontalAlignment="Center"
+                       Margin="15"/>
+        </Border>
+
+
+        <Border Background="White"
+                CornerRadius="10"
+                Padding="10"
+                Margin="0,0,0,15">
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+
+                <TextBlock Text="Wybierz datę:"
+                           VerticalAlignment="Center"
+                           FontWeight="Bold"
+                           Margin="0,0,10,0"/>
+
+                <DatePicker x:Name="dpData"
+                            Width="200"
+                            SelectedDateChanged="dpData_SelectedDateChanged"/>
+            </StackPanel>
+
+        </Border>
+
+        <DataGrid x:Name="dgTerminarz"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  Height="450"
+                  SelectionMode="Single">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Klient"
+                                    Binding="{Binding Klient}"
+                                    Width="180"/>
+
+                <DataGridTextColumn Header="Usługa"
+                                    Binding="{Binding Usluga}"
+                                    Width="180"/>
+
+                <DataGridTextColumn Header="Pracownik"
+                                    Binding="{Binding Pracownik}"
+                                    Width="180"/>
+
+                <DataGridTextColumn Header="Sprzęt"
+                                    Binding="{Binding Sprzet}"
+                                    Width="180"/>
+
+                <DataGridTextColumn Header="Od"
+                                    Binding="{Binding DataOd, StringFormat=dd.MM.yyyy}"
+                                    Width="120"/>
+
+                <DataGridTextColumn Header="Do"
+                                    Binding="{Binding DataDo, StringFormat=dd.MM.yyyy}"
+                                    Width="120"/>
+
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </StackPanel>
+
+</Window>
