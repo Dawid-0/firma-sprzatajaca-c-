@@ -46,7 +46,7 @@ namespace Aplikacja
             Pracownicy oknoPracownicy = new Pracownicy();
             oknoPracownicy.Show();
             this.Hide();
-
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OknoTerminarzZlecen oknoTerminarz = new OknoTerminarzZlecen();
