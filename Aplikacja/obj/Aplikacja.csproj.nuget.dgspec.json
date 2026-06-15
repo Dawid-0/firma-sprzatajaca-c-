@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\urag1\\source\\repos\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj": {}
+    "C:\\Users\\gosc0\\source\\repos\\Nowy folder (2)\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj": {}
   },
   "projects": {
-    "C:\\Users\\urag1\\source\\repos\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj": {
+    "C:\\Users\\gosc0\\source\\repos\\Nowy folder (2)\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\urag1\\source\\repos\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj",
+        "projectUniqueName": "C:\\Users\\gosc0\\source\\repos\\Nowy folder (2)\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj",
         "projectName": "Aplikacja",
-        "projectPath": "C:\\Users\\urag1\\source\\repos\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj",
-        "packagesPath": "C:\\Users\\urag1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\urag1\\source\\repos\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\obj\\",
+        "projectPath": "C:\\Users\\gosc0\\source\\repos\\Nowy folder (2)\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\Aplikacja.csproj",
+        "packagesPath": "C:\\Users\\gosc0\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gosc0\\source\\repos\\Nowy folder (2)\\Dawid-0\\firma-sprzatajaca-c-\\Aplikacja\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\urag1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gosc0\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
