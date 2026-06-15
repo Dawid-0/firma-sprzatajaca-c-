@@ -11,6 +11,8 @@ namespace Aplikacja
         public string? Nazwisko { get; set; }
         public string? Adres { get; set; }
         public string? Telefon { get; set; }
+
+        public string PelneDane => $"{Imie} {Nazwisko}";
     }
 
     public class Usluga
@@ -43,7 +45,7 @@ namespace Aplikacja
         public string? Opis { get; set; }
         public string? Typ { get; set; }
         public bool CzyWybrany { get; set; }
-        public int? ZlecenieId { get; set; }
+        //public int? ZlecenieId { get; set; }
         public List<Usluga> Uslugi { get; set; } = new();
     }
 
