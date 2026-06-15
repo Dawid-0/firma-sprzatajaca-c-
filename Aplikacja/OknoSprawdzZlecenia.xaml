@@ -35,12 +35,53 @@
                        FontSize="22"
                        FontWeight="Bold"
                        Margin="0,0,0,15"/>
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                
+                <TextBlock Text="Klient:"
+                   VerticalAlignment="Center"
+                   Margin="0,0,10,0"/>
 
+                <ComboBox x:Name="cbKlienci"
+                  Width="250"
+                  SelectionChanged="cbKlienci_SelectionChanged"/>
+                
+            </StackPanel>
+            
             <DataGrid x:Name="dgZlecenia"
-                      Height="450"
-                      AutoGenerateColumns="True"
-                      IsReadOnly="True"
-                      CanUserAddRows="False"/>
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              Height="450"
+              SelectionMode="Single">
+
+                <DataGrid.Columns>
+
+                    <DataGridTextColumn Header="Klient"
+                            Binding="{Binding WybranyKlient.PelneDane}"
+                            Width="120"/>
+
+                    <DataGridTextColumn Header="Usługa"
+                            Binding="{Binding WybranaUsluga.NazwaUslugi}" 
+                            Width="120"/>
+
+                    <DataGridTextColumn Header="Pracownik"
+                            Binding="{Binding Pracownik.PelneNazwisko}" 
+                            Width="200"/>
+
+                    <DataGridTextColumn Header="Sprzęt"
+                            Binding="{Binding Sprzet.Nazwa}" 
+                            Width="200"/>
+
+                    <DataGridTextColumn Header="Od"
+                            Binding="{Binding DataOd, StringFormat=dd.MM.yyyy}"
+                            Width="120"/>
+
+                    <DataGridTextColumn Header="Do"
+                            Binding="{Binding DataDo, StringFormat=dd.MM.yyyy}"
+                            Width="120"/>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
 
         </StackPanel>
     </Grid>
