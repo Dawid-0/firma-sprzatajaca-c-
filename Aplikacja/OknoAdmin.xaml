@@ -58,7 +58,7 @@
                     FontSize="16"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Content="Zlecenia"/>
+                    Content="Zlecenia" Click="Button_Click"/>
                 <Button Width="150"
                     Height="120"
                     Margin="10"
