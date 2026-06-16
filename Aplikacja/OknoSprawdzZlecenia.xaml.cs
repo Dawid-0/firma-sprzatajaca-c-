@@ -30,9 +30,12 @@ namespace Aplikacja
 
         private void ZaladujZlecenia()
         {
-<<<<<<< HEAD
-            dgZlecenia.ItemsSource = db.Zlecenia.Include(z => z.Klient).Include(z => z.Usluga).ToList();
-=======
+
+            dgZlecenia.ItemsSource = db.Zlecenia
+                .Include(z => z.WybranyKlient)
+                .Include(z => z.WybranaUsluga)
+                .ToList();
+
             wszystkieZlecenia = db.Zlecenia
                 .Include(z => z.WybranyKlient)
                 .Include(z => z.WybranaUsluga)
@@ -51,7 +54,7 @@ namespace Aplikacja
             cbKlienci.DisplayMemberPath = "PelneDane";
             dgZlecenia.ItemsSource = null;
             cbKlienci.SelectedIndex = -1;
->>>>>>> ff95185717204a6dfe1d18c0b5b84550bf961a6a
+
         }
         private void cbKlienci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

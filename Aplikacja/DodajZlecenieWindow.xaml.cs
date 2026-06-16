@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using Aplikacja.Modele;
-// Dodano jawny using dla Entity Framework Core na wszelki wypadek
+
 using Microsoft.EntityFrameworkCore;
 
 namespace Aplikacja
 {
     public partial class DodajZlecenieWindow : Window
     {
-        // Dodano znak zapytania '?', aby uciszyć błędy o wartościach null
+
         public List<Klient>? Klienci { get; set; }
         public Klient? WybranyKlient { get; set; }
 
@@ -45,7 +45,7 @@ namespace Aplikacja
                         CzyWybrany = false
                     }).ToList();
 
-                    Sprzety = db.Sprzety.Where(s => s.CzyDostepny).Select(s => new SprzetViewModel
+                    Sprzety = db.Sprzety.Select(s => new SprzetViewModel
                     {
                         Sprzet = s,
                         CzyWybrany = false
@@ -89,16 +89,15 @@ namespace Aplikacja
             {
                 using (var db = new AppDbContext())
                 {
-                    // Używamy całych obiektów, a nie właściwości Id (np. KlientId), 
-                    // aby ominąć błędy kompilatora mówiące o braku definicji "Id".
+
                     var noweZlecenie = new Zlecenie
                     {
-                        Klient = db.Klienci.Find(WybranyKlient.Id),
-                        Usluga = db.Uslugi.Find(WybranaUsluga.Id),
+                        WybranyKlientId = WybranyKlient.Id,
+                        WybranaUslugaId = WybranaUsluga.Id,
                         DataOd = this.DataOd,
                         DataDo = this.DataDo,
-                        Pracownik = db.Pracownicy.Find(wybranyPracownik.Id),
-                        Sprzet = db.Sprzety.Find(wybranySprzet.Id)
+                        PracownikId = wybranyPracownik.Id,
+                        SprzetId = wybranySprzet.Id
                     };
 
                     db.Zlecenia.Add(noweZlecenie);
@@ -129,7 +128,7 @@ namespace Aplikacja
     {
         public Pracownik? Pracownik { get; set; }
         public bool CzyWybrany { get; set; }
-        // Używamy operatora '?' chroniącego przed odwołaniem do null'a
+
         public string PelneNazwisko => $"{Pracownik?.Imie} {Pracownik?.Nazwisko}";
     }
 
