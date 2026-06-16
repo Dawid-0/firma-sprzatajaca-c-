@@ -17,6 +17,8 @@ namespace Aplikacja.Modele
         public string Nazwisko { get; set; }
         public string Adres { get; set; }
         public string Telefon { get; set; }
+       
+        public string PelneDane => $"{Imie} {Nazwisko}";
     }
 
     public class Sprzet

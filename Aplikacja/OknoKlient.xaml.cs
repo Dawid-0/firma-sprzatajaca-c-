@@ -40,7 +40,11 @@ namespace Aplikacja
 
         private void UtworzZlecenie_Click(object sender, RoutedEventArgs e)
         {
+            DodajZlecenieWindow oknoDodajZlecenie = new DodajZlecenieWindow();
 
+            oknoDodajZlecenie.Show();
+
+            this.Hide();
         }
 
         private void btnPowrot_Click(object sender, RoutedEventArgs e)
