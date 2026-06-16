@@ -10,7 +10,6 @@ namespace Aplikacja
     /// </summary>
     public partial class Pracownicy : Window
     {
-        // Pole przechowujące kontekst bazy danych
         private AppDbContext _context;
 
         public Pracownicy()
@@ -19,32 +18,29 @@ namespace Aplikacja
 
             try
             {
-                // Inicjalizacja połączenia z bazą danych
                 _context = new AppDbContext();
-                _context.Database.EnsureCreated(); // Upewnia się, że baza istnieje
+                _context.Database.EnsureCreated(); 
 
                 ZaladujPracownikow();
             }
             catch (Exception ex)
             {
-                // Wyświetlenie okienka z błędem, który normalnie zamyka aplikację
+                
                 MessageBox.Show($"Błąd podczas otwierania okna:\n{ex.Message}\n\nInnerException:\n{ex.InnerException?.Message}",
                                 "Błąd krytyczny", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
-        // Metoda pobierająca dane z bazy SQLite
+      
         private void ZaladujPracownikow()
         {
             var pracownicy = _context.Pracownicy.ToList();
-            // Przypisanie danych do tabeli (upewnij się, że w XAML tabela ma x:Name="PracownicyDataGrid")
+           
             PracownicyDataGrid.ItemsSource = pracownicy;
         }
 
-        // Metoda podpięta pod przycisk "Dodaj"
         private void Dodaj_Click(object sender, RoutedEventArgs e)
         {
-            // Walidacja wprowadzonych danych
             if (string.IsNullOrWhiteSpace(ImieTextBox.Text) ||
                 string.IsNullOrWhiteSpace(NazwiskoTextBox.Text) ||
                 !int.TryParse(WiekTextBox.Text, out int wiek))
@@ -53,7 +49,6 @@ namespace Aplikacja
                 return;
             }
 
-            // Tworzenie nowego obiektu pracownika
             var nowyPracownik = new Pracownik
             {
                 Imie = ImieTextBox.Text,
@@ -61,23 +56,18 @@ namespace Aplikacja
                 Wiek = wiek
             };
 
-            // Dodanie do bazy i zapisanie zmian
             _context.Pracownicy.Add(nowyPracownik);
             _context.SaveChanges();
 
-            // Czyszczenie pól formularza
             ImieTextBox.Clear();
             NazwiskoTextBox.Clear();
             WiekTextBox.Clear();
 
-            // Odświeżenie widoku tabeli
             ZaladujPracownikow();
         }
 
-        // Metoda podpięta pod przycisk "Usuń"
         private void Usun_Click(object sender, RoutedEventArgs e)
         {
-            // Sprawdzenie, czy użytkownik zaznaczył kogoś w tabeli
             if (PracownicyDataGrid.SelectedItem is Pracownik wybranyPracownik)
             {
                 _context.Pracownicy.Remove(wybranyPracownik);
@@ -91,15 +81,12 @@ namespace Aplikacja
             }
         }
 
-        // Metoda podpięta pod przycisk "Wróć"
-        // Metoda podpięta pod przycisk "Wróć"
+
         private void Wroc_Click(object sender, RoutedEventArgs e)
         {
-            // Otwarcie z powrotem panelu administratora
             OknoAdmin oknoAdmin = new OknoAdmin();
             oknoAdmin.Show();
 
-            // Zamknięcie obecnego okna pracowników
             this.Close();
         }
 

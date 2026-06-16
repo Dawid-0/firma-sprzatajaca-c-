@@ -5,13 +5,13 @@ namespace Aplikacja
 {
     public class AppDbContext : DbContext
     {
+
         public DbSet<Pracownik> Pracownicy { get; set; }
         public DbSet<Klient> Klienci { get; set; }
         public DbSet<Sprzet> Sprzety { get; set; }
         public DbSet<Usluga> Uslugi { get; set; }
         public DbSet<Zlecenie> Zlecenia { get; set; }
 
-<<<<<<< HEAD
         public AppDbContext()
         {
             // UWAGA: Uruchom aplikację raz z odblokowaną linijką poniżej, 
@@ -20,12 +20,10 @@ namespace Aplikacja
 
             Database.EnsureCreated();
         }
-=======
-      
->>>>>>> ff95185717204a6dfe1d18c0b5b84550bf961a6a
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+           
             optionsBuilder.UseSqlite("Data Source=FirmaSprzatajaca.db");
         }
 
