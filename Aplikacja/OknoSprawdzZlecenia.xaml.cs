@@ -20,6 +20,7 @@ namespace Aplikacja
     public partial class OknoSprawdzZlecenia : Window
     {
         private AppDbContext db = new AppDbContext();
+        private List<Zlecenie> wszystkieZlecenia;
 
         public OknoSprawdzZlecenia()
         {
@@ -29,8 +30,44 @@ namespace Aplikacja
 
         private void ZaladujZlecenia()
         {
+<<<<<<< HEAD
             dgZlecenia.ItemsSource = db.Zlecenia.Include(z => z.Klient).Include(z => z.Usluga).ToList();
+=======
+            wszystkieZlecenia = db.Zlecenia
+                .Include(z => z.WybranyKlient)
+                .Include(z => z.WybranaUsluga)
+                .Include(z => z.Pracownik)
+                .Include(z => z.Sprzet)
+                .ToList();
+
+            dgZlecenia.ItemsSource = wszystkieZlecenia;
+
+            var klienci = wszystkieZlecenia
+                .Select(z => z.WybranyKlient)
+                .Distinct()
+                .ToList();
+
+            cbKlienci.ItemsSource = klienci;
+            cbKlienci.DisplayMemberPath = "PelneDane";
+            dgZlecenia.ItemsSource = null;
+            cbKlienci.SelectedIndex = -1;
+>>>>>>> ff95185717204a6dfe1d18c0b5b84550bf961a6a
         }
+        private void cbKlienci_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (cbKlienci.SelectedItem == null)
+            {
+                dgZlecenia.ItemsSource = null;
+                return;
+            }
+
+            var wybranyKlient = (Klient)cbKlienci.SelectedItem;
+
+            dgZlecenia.ItemsSource = wszystkieZlecenia
+                .Where(z => z.WybranyKlientId == wybranyKlient.Id)
+                .ToList();
+        }
+
 
         private void btnPowrot_Click(object sender, RoutedEventArgs e)
         {

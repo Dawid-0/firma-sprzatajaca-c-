@@ -47,7 +47,7 @@
                 FontSize="16"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Content="Dostepne uslugi"/>
+                Content="Dostepne uslugi" Click="Button_Click_1"/>
 
                 <Button Width="150"
                     Height="120"
@@ -58,7 +58,7 @@
                     FontSize="16"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Content="Zlecenia"/>
+                    Content="Zlecenia" Click="Button_Click"/>
                 <Button Width="150"
                     Height="120"
                     Margin="10"
@@ -68,7 +68,7 @@
                     FontSize="16"
                     FontWeight="SemiBold"
                     Cursor="Hand"
-                    Content="Pracownicy"/>
+                    Content="Pracownicy" Click="Pracownicy_Click"/>
                 <Button Width="150"
                     Height="120"
                     Margin="10"
