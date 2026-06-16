@@ -53,5 +53,12 @@ namespace Aplikacja
             oknoTerminarz.Show();
             this.Hide();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            OknoDostepneUslugi oknoUslugi = new OknoDostepneUslugi();
+            oknoUslugi.Show();
+            this.Hide();
+        }
     }
 }

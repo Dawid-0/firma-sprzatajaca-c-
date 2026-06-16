@@ -18,7 +18,19 @@
             HorizontalAlignment="Center" Margin="20"/>
         </Border>
 
-        <DataGrid x:Name="dgSprzet" AutoGenerateColumns="True" Height="350" Margin="0,0,0,20"/>
+        <DataGrid x:Name="dgSprzet"
+          AutoGenerateColumns="False"
+          Height="350"
+          Margin="0,0,0,20">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="Auto"/>
+                <DataGridTextColumn Header="Nazwa" Binding="{Binding Nazwa}" Width="2*"/>
+                <DataGridTextColumn Header="Opis" Binding="{Binding Opis}" Width="3*"/>
+                <DataGridTextColumn Header="Typ" Binding="{Binding Typ}" Width="2*"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
 
         <StackPanel Background="White" Orientation="Vertical">
 
