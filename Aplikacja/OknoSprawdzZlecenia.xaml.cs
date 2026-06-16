@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
-
+using Aplikacja.Modele;
 namespace Aplikacja
 {
     /// <summary>
@@ -29,7 +29,7 @@ namespace Aplikacja
 
         private void ZaladujZlecenia()
         {
-            dgZlecenia.ItemsSource = db.Zlecenia.Include(z => z.WybranyKlient).Include(z => z.WybranaUsluga).ToList();
+            dgZlecenia.ItemsSource = db.Zlecenia.Include(z => z.Klient).Include(z => z.Usluga).ToList();
         }
 
         private void btnPowrot_Click(object sender, RoutedEventArgs e)

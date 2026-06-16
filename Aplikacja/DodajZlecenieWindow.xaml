@@ -19,12 +19,12 @@
         <UniformGrid Rows="1" Columns="2" Grid.Row="1" Margin="0,0,0,15">
             <StackPanel Margin="0,0,10,0">
                 <TextBlock Text="Wybierz Klienta:" Margin="0,0,0,5"/>
-                <ComboBox Height="30" ItemsSource="{Binding Klienci}" DisplayMemberPath="Nazwa" SelectedItem="{Binding WybranyKlient}"/>
+                <ComboBox Height="30" ItemsSource="{Binding Klienci}" DisplayMemberPath="PelneDane" SelectedItem="{Binding WybranyKlient}"/>
             </StackPanel>
 
             <StackPanel Margin="10,0,0,0">
                 <TextBlock Text="Rodzaj Usługi:" Margin="0,0,0,5"/>
-                <ComboBox Height="30" ItemsSource="{Binding Uslugi}" DisplayMemberPath="Nazwa" SelectedItem="{Binding WybranaUsluga}"/>
+                <ComboBox Height="30" ItemsSource="{Binding Uslugi}" DisplayMemberPath="NazwaUslugi" SelectedItem="{Binding WybranaUsluga}"/>
             </StackPanel>
         </UniformGrid>
 
@@ -73,8 +73,8 @@
         </UniformGrid>
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Anuluj" Width="100" Height="35" Margin="0,0,10,0" Background="#E0E0E0" BorderThickness="0" />
-            <Button Content="Zapisz Zlecenie" Width="140" Height="35" Background="#007ACC" Foreground="White"/>
+            <Button Content="Anuluj" Click="Anuluj_Click" Width="100" Height="35" Margin="0,0,10,0" Background="#E0E0E0" BorderThickness="0" />
+            <Button Content="Zapisz Zlecenie" Click="Zapisz_Click" Width="140" Height="35" Background="#007ACC" Foreground="White"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
+using Aplikacja.Modele;
 
 namespace Aplikacja
 {
@@ -20,30 +12,37 @@ namespace Aplikacja
     public partial class OknoListyUslug : Window
     {
         private AppDbContext db = new AppDbContext();
+
         public OknoListyUslug()
         {
             InitializeComponent();
 
-            cmbUslugi.ItemsSource = db.Uslugi.Include(u => u.Sprzety).ToList();
+            // Wczytujemy listę usług bez błędnego .Include()
+            cmbUslugi.ItemsSource = db.Uslugi.ToList();
             cmbUslugi.DisplayMemberPath = "NazwaUslugi";
         }
+
         private void cmbUslugi_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (cmbUslugi.SelectedItem is Usluga usluga)
             {
+                // Wypełniamy dane, które faktycznie istnieją w modelu
                 txtNazwa.Text = usluga.NazwaUslugi;
                 txtCena.Text = $"Cena: {usluga.CenaPodstawowa} zł";
-                txtOpis.Text = usluga.Opis;
 
-                lstSprzet.ItemsSource = usluga.Sprzety;
-                lstSprzet.DisplayMemberPath = "Nazwa";
+                // Poniższe linie są zakomentowane, dopóki nie dodasz 
+                // właściwości 'Opis' oraz relacji 'Sprzety' do modelu Usluga w bazie danych
+
+                // txtOpis.Text = usluga.Opis;
+                // lstSprzet.ItemsSource = usluga.Sprzety;
+                // lstSprzet.DisplayMemberPath = "Nazwa";
             }
         }
 
         private void btnPowrot_Click(object sender, RoutedEventArgs e)
         {
-            OknoKlient powrotDoOknaKlienta2 = new OknoKlient();
-            powrotDoOknaKlienta2.Show();
+            OknoKlient powrotDoOknaKlienta = new OknoKlient();
+            powrotDoOknaKlienta.Show();
 
             this.Hide();
         }
