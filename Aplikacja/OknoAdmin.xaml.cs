@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Aplikacja.Modele;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -27,8 +28,8 @@ namespace Aplikacja
             OknoWyboruLogowania powrotDoOknaWyboruLogowania = new OknoWyboruLogowania();
             powrotDoOknaWyboruLogowania.Show();
             this.Hide();
-
         }
+
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Application.Current.Shutdown();
@@ -47,6 +48,7 @@ namespace Aplikacja
             oknoPracownicy.Show();
             this.Hide();
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OknoTerminarzZlecen oknoTerminarz = new OknoTerminarzZlecen();
@@ -58,6 +60,13 @@ namespace Aplikacja
         {
             OknoDostepneUslugi oknoUslugi = new OknoDostepneUslugi();
             oknoUslugi.Show();
+            this.Hide();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Klienci Klienci = new Klienci();
+            Klienci.Show();
             this.Hide();
         }
     }

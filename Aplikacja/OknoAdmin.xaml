@@ -11,7 +11,6 @@
     <Grid>
 
         <StackPanel VerticalAlignment="Top">
-        
 
             <Border Background="#4F46E5"
                     CornerRadius="15"
@@ -19,7 +18,7 @@
                     Margin="0,20,0,30"
                     HorizontalAlignment="Center">
 
-            <TextBlock Text="Panel administratora"
+                <TextBlock Text="Panel administratora"
                            FontSize="26"
                            FontWeight="Bold"
                            Foreground="White"/>
@@ -36,49 +35,57 @@
                         FontSize="16"
                         FontWeight="SemiBold"
                         Cursor="Hand"
-                        Content="Dostepny sprzet" Click="Sprzet_Click"/>
-                
-                <Button Width="150"
-                Height="120"
-                Margin="10"
-                Background="#4F46E5"
-                Foreground="White"
-                BorderBrush="#4F46E5"
-                FontSize="16"
-                FontWeight="SemiBold"
-                Cursor="Hand"
-                Content="Dostepne uslugi" Click="Button_Click_1"/>
+                        Content="Dostepny sprzet" 
+                        Click="Sprzet_Click"/>
 
                 <Button Width="150"
-                    Height="120"
-                    Margin="10"
-                    Background="#4F46E5"
-                    Foreground="White"
-                    BorderBrush="#4F46E5"
-                    FontSize="16"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Content="Zlecenia" Click="Button_Click"/>
+                        Height="120"
+                        Margin="10"
+                        Background="#4F46E5"
+                        Foreground="White"
+                        BorderBrush="#4F46E5"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Content="Dostepne uslugi" 
+                        Click="Button_Click_1"/>
+
                 <Button Width="150"
-                    Height="120"
-                    Margin="10"
-                    Background="#4F46E5"
-                    Foreground="White"
-                    BorderBrush="#4F46E5"
-                    FontSize="16"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Content="Pracownicy" Click="Pracownicy_Click"/>
+                        Height="120"
+                        Margin="10"
+                        Background="#4F46E5"
+                        Foreground="White"
+                        BorderBrush="#4F46E5"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Content="Zlecenia" 
+                        Click="Button_Click"/>
+
                 <Button Width="150"
-                    Height="120"
-                    Margin="10"
-                    Background="#4F46E5"
-                    Foreground="White"
-                    BorderBrush="#4F46E5"
-                    FontSize="16"
-                    FontWeight="SemiBold"
-                    Cursor="Hand"
-                    Content="Klienci"/>
+                        Height="120"
+                        Margin="10"
+                        Background="#4F46E5"
+                        Foreground="White"
+                        BorderBrush="#4F46E5"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Content="Pracownicy" 
+                        Click="Pracownicy_Click"/>
+
+                <Button Width="150"
+                        Height="120"
+                        Margin="10"
+                        Background="#4F46E5"
+                        Foreground="White"
+                        BorderBrush="#4F46E5"
+                        FontSize="16"
+                        FontWeight="SemiBold"
+                        Cursor="Hand"
+                        Content="Klienci"
+                        Click="Button_Click_2"/>
+
                 <Button Width="150"
                         Height="120"
                         Margin="10"
@@ -88,13 +95,12 @@
                         FontSize="16"
                         FontWeight="SemiBold"
                         Cursor="Hand"
-                        Click="Wyloguj_Click"
-                        Content="Wyloguj"/>
+                        Content="Wyloguj"
+                        Click="Wyloguj_Click"/>
 
             </WrapPanel>
 
         </StackPanel>
 
     </Grid>
-
 </Window>
