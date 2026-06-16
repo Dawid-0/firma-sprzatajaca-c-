@@ -69,4 +69,5 @@ namespace Aplikacja
         public int SprzetId { get; set; }
         public Sprzet Sprzet { get; set; }
     }
+
 }

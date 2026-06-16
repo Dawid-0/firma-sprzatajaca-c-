@@ -12,6 +12,8 @@ namespace Aplikacja
         public DbSet<Usluga> Uslugi { get; set; }
         public DbSet<Zlecenie> Zlecenia { get; set; }
 
+      
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // Wskazujemy, że chcemy używać bazy danych SQLite i podajemy nazwę pliku bazy danych

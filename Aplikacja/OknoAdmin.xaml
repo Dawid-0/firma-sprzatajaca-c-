@@ -47,7 +47,7 @@
                 FontSize="16"
                 FontWeight="SemiBold"
                 Cursor="Hand"
-                Content="Dostepne uslugi"/>
+                Content="Dostepne uslugi" Click="Button_Click_1"/>
 
                 <Button Width="150"
                     Height="120"
